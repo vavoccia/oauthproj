@@ -1,0 +1,98 @@
+[
+  {
+    "local": {
+      "email": "vvoccia@google.com",
+      "password": "password1"
+    },
+    "facebook": {
+      "id": "561-252-5272",
+      "token": "6bc123qsf43m1",
+      "email": "vvoccia@google.com",
+      "name": "Vince"
+    },
+    "twitter": {
+      "id": "vvoccia@google.com",
+      "token": "7bc123qsf43m1",
+      "displayName": "vsquared21",
+      "username": "vsquared21"
+    },
+    "google": {
+      "id": "vvoccia",
+      "token": "3bc123qsf43m9",
+      "email": "vvoccia@google.com",
+      "name": "Vince"
+    }
+  },
+  {
+    "local": {
+      "email": "jvoccia@google.com",
+      "password": "password2"
+    },
+    "facebook": {
+      "id": "561-252-5273",
+      "token": "1bc123qsf43m5",
+      "email": "jvoccia@google.com",
+      "name": "Jeremy"
+    },
+    "twitter": {
+      "id": "jvoccia@google.com",
+      "token": "2bc123qsf43m5",
+      "displayName": "jsquared21",
+      "username": "jsquared21"
+    },
+    "google": {
+      "id": "jvoccia",
+      "token": "3bc123qsf43m5",
+      "email": "jvoccia@google.com",
+      "name": "Jeremy"
+    }
+  },
+  {
+    "local": {
+      "email": "avoccia@google.com",
+      "password": "password3"
+    },
+    "facebook": {
+      "id": "561-252-5274",
+      "token": "7bc123qsf43m5",
+      "email": "avoccia@google.com",
+      "name": "Alyssa"
+    },
+    "twitter": {
+      "id": "avoccia@google.com",
+      "token": "mbc123qsf43m5",
+      "displayName": "asquared21",
+      "username": "asquared21"
+    },
+    "google": {
+      "id": "avoccia",
+      "token": "lbc123qsf43m5",
+      "email": "avoccia@google.com",
+      "name": "Alyssa"
+    }
+  },
+  {
+    "local": {
+      "email": "rvoccia@google.com",
+      "password": "password4"
+    },
+    "facebook": {
+      "id": "561-252-5275",
+      "token": "wbc123qsf43m5",
+      "email": "rvoccia@google.com",
+      "name": "Ryan"
+    },
+    "twitter": {
+      "id": "rvoccia@google.com",
+      "token": "4bc123qsf43m5",
+      "displayName": "rsquared21",
+      "username": "rsquared21"
+    },
+    "google": {
+      "id": "rvoccia",
+      "token": "0bc123qsf43m5",
+      "email": "rvoccia@google.com",
+      "name": "Ryan"
+    }
+  }
+]
