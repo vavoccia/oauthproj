@@ -94,5 +94,23 @@
       "email": "rvoccia@google.com",
       "name": "Ryan"
     }
+  },
+  {
+    "local": {
+      "email": "vav@gmail.com",
+      "password": "$2a$08$s9HfjWR0LFWQV/wNO5J9xOK3qqZYQd7NBzb0gZBT5nd4pBoW7U/WG"
+    },
+    "facebook": {},
+    "twitter": {},
+    "google": {}
+  },
+  {
+    "local": {
+      "email": "amv@hotmail.com",
+      "password": "$2a$08$1RxEYaRJe4zH4xAZx0VTD.j.o31.CCH3x1q1Wz2RR00HkPQ.eEOl2"
+    },
+    "facebook": {},
+    "twitter": {},
+    "google": {}
   }
 ]

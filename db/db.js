@@ -35,6 +35,19 @@ var db = (function(){
             });
         }
 
+        object.findOne = function(prop, _user){
+            return new Promise(function(resolve,reject){
+                if(instance.list() !== undefined){
+                    var allUsers = instance.list();
+                    var obj = allUsers.find(x => get(x, prop) === _user);
+                    resolve(obj);
+                } else {
+                    reject('No ToDo List');
+                }
+            });
+        }
+
+
         function getx(y, p){
             console.log(y, p);
             console.log(get(y, p));

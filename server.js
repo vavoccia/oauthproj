@@ -8,23 +8,24 @@ var session = require('express-session');
 var bodyParser =require('body-parser');
 var passport = require('passport');
 var ejs = require('ejs');
-
-var userModel = require('./db/model');
-var db = require('./db/db').db;
-
-var users = db.create();
+var path = require('path');
+var fs = require("fs");
+fs.existsSync = fs.existsSync || require('path').existsSync;
+require('./config/passport')(passport);
+//var db = require('./db/db').db;
+//var users = db.create();
 var app = express();
 var port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 app.use(bodyParser());
-//app.use(morgan('dev'));
+app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(session(
     {
         secret: 'anystringoftext',
-	    saveUninitialized: true,
-        resave: true
+	    saveUninitialized: false,
+        resave: false
     })
 );
 
@@ -32,8 +33,7 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
-require('./app/routes')(app, express);
-require('./app/authroutes')(app, express);
+require('./app/authroutes')(app, passport, express);
 
 
 app.listen(port, () => {
