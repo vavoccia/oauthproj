@@ -47,17 +47,10 @@ var db = (function(){
             });
         }
 
-
-        function getx(y, p){
-            console.log(y, p);
-            console.log(get(y, p));
-            return get(y, p);
-        }
-
          object.delete = function(prop, _user){
             return new Promise(function(resolve,reject){
                 if(instance.list() !== undefined){
-                    var idx = instance.list().findIndex(x => getx(x, prop) === _user);
+                    var idx = instance.list().findIndex(x => get(x, prop) === _user);
                     if(idx >= 0){
                        instance.list().splice(idx,1);
                         fs.writeFile('./db/dbData.json', JSON.stringify(instance.list(), null,2), (err) => {
@@ -102,8 +95,8 @@ var db = (function(){
             return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
         };
 
-        object.validPassword = function(password, user) {
-            return bcrypt.compareSync(password, user.password);
+        object.validPassword = function(strat, password, user) {
+            return bcrypt.compareSync(password, get(user, strat));
         };
 
         object.save = function(user){

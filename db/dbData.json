@@ -2,7 +2,7 @@
   {
     "local": {
       "email": "vvoccia@hotmail.com",
-      "password": "abcd1234"
+      "password": "$2a$08$SaWApLORLviwJWRwz2vLSuZdGlgbBhFmnpiYsHgOu9Vu02Jfd41eq"
     },
     "facebook": {
       "id": "561-252-5272",
@@ -26,7 +26,7 @@
   {
     "local": {
       "email": "jvoccia@google.com",
-      "password": "password2"
+      "password": "$2a$08$PaSp4Useppp.1ZWr64GcxOzPDjp5KOKMhIPjmAnQEcV1wUJl1f9v6"
     },
     "facebook": {
       "id": "561-252-5273",
@@ -50,7 +50,7 @@
   {
     "local": {
       "email": "avoccia@google.com",
-      "password": "password3"
+      "password": "$2a$08$NO5b4p2KcbDlMF0t9V1jo.CNTsDWQAQ8Vv3pOVTQWHq9w641T5LwW"
     },
     "facebook": {
       "id": "561-252-5274",
@@ -74,7 +74,7 @@
   {
     "local": {
       "email": "rvoccia@google.com",
-      "password": "password4"
+      "password": "$2a$08$D0SSxy712kPt0EOpx7c.oOq8.thkM/wgPc9XGhFfHdIfmmi4gYZCC"
     },
     "facebook": {
       "id": "561-252-5275",
@@ -94,23 +94,5 @@
       "email": "rvoccia@google.com",
       "name": "Ryan"
     }
-  },
-  {
-    "local": {
-      "email": "vav@gmail.com",
-      "password": "$2a$08$s9HfjWR0LFWQV/wNO5J9xOK3qqZYQd7NBzb0gZBT5nd4pBoW7U/WG"
-    },
-    "facebook": {},
-    "twitter": {},
-    "google": {}
-  },
-  {
-    "local": {
-      "email": "amv@hotmail.com",
-      "password": "$2a$08$1RxEYaRJe4zH4xAZx0VTD.j.o31.CCH3x1q1Wz2RR00HkPQ.eEOl2"
-    },
-    "facebook": {},
-    "twitter": {},
-    "google": {}
   }
 ]

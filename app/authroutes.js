@@ -16,11 +16,11 @@ module.exports = function (app, passport, express) {
     });
 
     router.get('/signup', (req, res) => {
-        res.render('signup.ejs', { message: req.flash('loginMessage') });
+        res.render('signup.ejs', { message: req.flash('signupMessage') });
     });
 
     router.get('/login', (req, res) => {
-        res.render('login.ejs', { message: req.flash('signupMessage') });
+        res.render('login.ejs', { message: req.flash('loginMessage') });
     });
 
     // =====================================
