@@ -11,8 +11,10 @@ module.exports = function (app, passport, express) {
         next();
     });
 
-    router.get('/', (req, res) => {
-        res.render('index.ejs');
+    router.get('/',isLoggedIn, (req, res) => {
+        res.render('index.ejs',{
+            user : req.user // get the user out of session and pass to template
+        });
     });
 
     router.get('/signup', (req, res) => {
@@ -22,6 +24,18 @@ module.exports = function (app, passport, express) {
     router.get('/login', (req, res) => {
         res.render('login.ejs', { message: req.flash('loginMessage') });
     });
+
+
+    router.get('/local_login', (req, res) => {
+        res.render('local_login.ejs', { message: req.flash('loginMessage') });
+    });
+
+    // process the login form
+    router.post('/local_login', passport.authenticate('local-login', {
+        successRedirect : '/', // redirect to the secure profile section
+        failureRedirect : '/signup', // redirect back to the signup page if there is an error
+        failureFlash : true // allow flash messages
+    }));    
 
     // =====================================
     // LOGOUT ==============================
@@ -44,18 +58,72 @@ module.exports = function (app, passport, express) {
     // we will want this protected so you have to be logged in to visit
     // we will use route middleware to verify this (the isLoggedIn function)
     router.get('/profile', isLoggedIn, function(req, res) {
-        res.render('profile.ejs', {
+        res.render('index.ejs', {
             user : req.user // get the user out of session and pass to template
         });
     }); 
 
     router.post('/signup', passport.authenticate('local-signup', {
-        successRedirect: '/profile', // redirect to the secure profile section
-        failureRedirect: '/signup', // redirect back to the signup page if there is an error
+        successRedirect: '/', // redirect to the secure profile section
+        failureRedirect: '/login', // redirect back to the signup page if there is an error
         failureFlash: true // allow flash messages
     }));
 
  
+    // =====================================
+    // FACEBOOK ROUTES =====================
+    // =====================================
+    // route for facebook authentication and login
+    router.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+
+    // handle the callback after facebook has authenticated the user
+ 
+    router.get('/auth/facebook/callback',
+        passport.authenticate('facebook', {
+            successRedirect : '/',
+            failureRedirect : '/login'
+    }));   
+
+    // router.get('/auth/facebook/callback', function(req, res, next) {
+    //     if( req.user) {
+    //         passport.authorize('facebook', {
+    //             successRedirect : '/profile',
+    //             failureRedirect : '/'
+    //         })(req, res, next);
+    //     } else {
+    //         passport.authenticate('facebook', {
+    //             successRedirect : '/profile',
+    //             failureRedirect : '/'
+    //         })(req, res, next);
+
+    //     } 
+    // });
+
+    //Link to Local Accounts
+
+       // locally --------------------------------
+        app.get('/connect/local', function(req, res) {
+            res.render('connect-local.ejs', { message: req.flash('loginMessage') });
+        });
+        app.post('/connect/local', passport.authenticate('local-signup', {
+            successRedirect : '/profile', // redirect to the secure profile section
+            failureRedirect : '/connect/local', // redirect back to the signup page if there is an error
+            failureFlash : true // allow flash messages
+        })); 
+
+    //Link to other Social Accounts
+    // facebook -------------------------------
+
+        // send to facebook to do the authentication
+        app.get('/connect/facebook', passport.authorize('facebook', { scope : 'email' }));
+
+        // handle the callback after facebook has authorized the user
+        app.get('/connect/facebook/callback',
+            passport.authorize('facebook', {
+                successRedirect : '/',
+                failureRedirect : '/login'
+            }));
+
 
     app.use('/', router);
 
@@ -68,5 +136,5 @@ function isLoggedIn(req, res, next) {
         return next();
 
     // if they aren't redirect them to the home page
-    res.redirect('/');
+    res.redirect('login');
 }

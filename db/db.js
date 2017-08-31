@@ -23,11 +23,19 @@ var db = (function(){
             });
         }
 
-        object.findById = function(prop, _user){
+        function getProp(obj, id){
+            return  obj.local.email === id ? true : 
+                        obj.facebook.id === id ? true : 
+                            obj.google.id === id ? true :
+                                obj.twitter.id === id ? true : false;
+        }
+
+
+        object.findById = function(id){
             return new Promise(function(resolve,reject){
                 if(instance.list() !== undefined){
                     var allUsers = instance.list();
-                    var obj = allUsers.find(x => get(x, prop) === _user);
+                    var obj = allUsers.find(x => x.id === id);
                     resolve(obj);
                 } else {
                     reject('No ToDo List');
@@ -68,14 +76,12 @@ var db = (function(){
             });
         }
       
-        object.findByIdAndUpdate = function(prop, _user, _obj){
+        object.findByIdAndUpdate = function( _id, _obj){
             return new Promise(function(resolve,reject){
                 if(instance.list() !== undefined){
-                    var idx = instance.list().findIndex(x => get(x, prop) === _user);
+                    var idx = instance.list().findIndex(x => x.id === _id);
                     if(idx >= 0){
-                        var strat = prop.split('.')[0];
-                        var obj = assign(instance.list()[idx][strat], _obj);
-                        instance.list()[idx][strat] = obj;
+                        instance.list()[idx] = _obj;
                         fs.writeFile('./db/dbData.json', JSON.stringify(instance.list(), null,2), (err) => {
                             if (err) {
                                 throw err;
@@ -102,6 +108,8 @@ var db = (function(){
         object.save = function(user){
             return new Promise(function(resolve,reject){
                 if(instance.list() !== undefined){
+                    var len = instance.list().length;
+                    user.id = instance.list()[len-1].id + 1;
                     instance.list().push(user);
                     fs.writeFile('./db/dbData.json', JSON.stringify(instance.list(), null,2), (err) => {
                         if (err) throw err;

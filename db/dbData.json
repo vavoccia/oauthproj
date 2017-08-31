@@ -1,98 +1,102 @@
 [
   {
+    "id": 1000001,
     "local": {
-      "email": "vvoccia@hotmail.com",
-      "password": "$2a$08$SaWApLORLviwJWRwz2vLSuZdGlgbBhFmnpiYsHgOu9Vu02Jfd41eq"
+      "email": "vvoccia@outlook.com",
+      "password": "$2a$08$pQPF0pntb//nFOqa2mehz.HAZ0OYAUZDu4lJHkdoYAHOYBqnsfmSq"
     },
     "facebook": {
-      "id": "561-252-5272",
-      "token": "6bc123qsf43m1",
-      "email": "vvoccia@google.com",
-      "name": "Vince"
+      "id": "10214385270169584",
+      "token": "EAAbWTS3l1zYBAGESSuCF2oT627OOWoiOJFOMBWLRIEyY6BS7gGVhmO0RNg3Tq7bMtecINqxNHEGm7Vfrp9nUXIQCxwm7MISWBRFkOifZB79mZB2mQCaedcz3xvFhxxpaA4o9gdOgxYEkxIUW6xQOCMY1ron3gZD",
+      "email": "flvince021@hotmail.com",
+      "name": "Vince Voccia"
     },
     "twitter": {
-      "id": "vvoccia@google.com",
-      "token": "7bc123qsf43m1",
-      "displayName": "vsquared21",
-      "username": "vsquared21"
+      "id": null,
+      "token": null,
+      "displayName": null,
+      "username": null
     },
     "google": {
-      "id": "vvoccia",
-      "token": "3bc123qsf43m9",
-      "email": "vvoccia@google.com",
-      "name": "Vince"
+      "id": null,
+      "token": null,
+      "email": null,
+      "name": null
     }
   },
   {
+    "id": 1000002,
     "local": {
       "email": "jvoccia@google.com",
       "password": "$2a$08$PaSp4Useppp.1ZWr64GcxOzPDjp5KOKMhIPjmAnQEcV1wUJl1f9v6"
     },
     "facebook": {
-      "id": "561-252-5273",
-      "token": "1bc123qsf43m5",
-      "email": "jvoccia@google.com",
-      "name": "Jeremy"
+      "id": null,
+      "token": null,
+      "email": null,
+      "name": null
     },
     "twitter": {
-      "id": "jvoccia@google.com",
-      "token": "2bc123qsf43m5",
-      "displayName": "jsquared21",
-      "username": "jsquared21"
+      "id": null,
+      "token": null,
+      "displayName": null,
+      "username": null
     },
     "google": {
-      "id": "jvoccia",
-      "token": "3bc123qsf43m5",
-      "email": "jvoccia@google.com",
-      "name": "Jeremy"
+      "id": null,
+      "token": null,
+      "email": null,
+      "name": null
     }
   },
   {
+    "id": 1000003,
     "local": {
       "email": "avoccia@google.com",
       "password": "$2a$08$NO5b4p2KcbDlMF0t9V1jo.CNTsDWQAQ8Vv3pOVTQWHq9w641T5LwW"
     },
     "facebook": {
-      "id": "561-252-5274",
-      "token": "7bc123qsf43m5",
-      "email": "avoccia@google.com",
-      "name": "Alyssa"
+      "id": null,
+      "token": null,
+      "email": null,
+      "name": null
     },
     "twitter": {
-      "id": "avoccia@google.com",
-      "token": "mbc123qsf43m5",
-      "displayName": "asquared21",
-      "username": "asquared21"
+      "id": null,
+      "token": null,
+      "displayName": null,
+      "username": null
     },
     "google": {
-      "id": "avoccia",
-      "token": "lbc123qsf43m5",
-      "email": "avoccia@google.com",
-      "name": "Alyssa"
+      "id": null,
+      "token": null,
+      "email": null,
+      "name": null
     }
   },
   {
+    "id": 1000004,
     "local": {
       "email": "rvoccia@google.com",
       "password": "$2a$08$D0SSxy712kPt0EOpx7c.oOq8.thkM/wgPc9XGhFfHdIfmmi4gYZCC"
     },
     "facebook": {
-      "id": "561-252-5275",
-      "token": "wbc123qsf43m5",
-      "email": "rvoccia@google.com",
-      "name": "Ryan"
+      "id": null,
+      "token": null,
+      "email": null,
+      "name": null
     },
     "twitter": {
-      "id": "rvoccia@google.com",
-      "token": "4bc123qsf43m5",
-      "displayName": "rsquared21",
-      "username": "rsquared21"
+      "id": null,
+      "token": null,
+      "displayName": null,
+      "username": null
     },
     "google": {
-      "id": "rvoccia",
-      "token": "0bc123qsf43m5",
-      "email": "rvoccia@google.com",
-      "name": "Ryan"
+      "id": null,
+      "token": null,
+      "email": null,
+      "name": null
     }
   }
 ]
